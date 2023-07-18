@@ -34,6 +34,7 @@ public class TrancaService {
 
     public Tranca destrancarTranca(Tranca tranca) {
         tranca.setStatus("LIVRE");
+        tranca.setBicicleta(null);
         return this.atualizarTranca(tranca, tranca.getId());
     }
 
@@ -73,7 +74,7 @@ public class TrancaService {
                     + trancaRecuperada.getId() + " foi inserida no totem " + totemRecuperado.getId();
             Email email = new Email("pmemail@gmail.com", "Tranca cadastrada", corpoEmail);
 
-            externoClient.enviarEmail(email);
+//            externoClient.enviarEmail(email);
             return true;
 
         }
@@ -94,7 +95,7 @@ public class TrancaService {
                     + trancaRecuperada.getId() + " foi retirada do totem " + redeRecuperada.getId();
             Email email = new Email("pmemail@gmail.com", "Tranca cadastrada", corpoEmail);
 
-            externoClient.enviarEmail(email);
+//            externoClient.enviarEmail(email);
             return true;
         }
         return false;

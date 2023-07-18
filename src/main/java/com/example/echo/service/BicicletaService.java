@@ -77,7 +77,7 @@ public class BicicletaService {
                     + bicicletaRecuperada.getId() + " foi inserida no totem "
                     + totemRecuperado.getId() + " e na tranca " + trancaRecuperada.getId();
             Email email = new Email("pmemail@gmail.com", "Tranca cadastrada", corpoEmail);
-            externoClient.enviarEmail(email);
+//            externoClient.enviarEmail(email);
             return true;
         }
         return false;
@@ -104,7 +104,7 @@ public class BicicletaService {
 
             Email email = new Email("pmemail@gmail.com","Bicicleta Removida", corpoEmail);
 
-            externoClient.enviarEmail(email);
+//            externoClient.enviarEmail(email);
             return true;
         }
         return false;
